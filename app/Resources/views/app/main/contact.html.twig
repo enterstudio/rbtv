@@ -1,0 +1,94 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Kontakt{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h2 class="page-header">Kontakt</h2>
+
+      <div class="col-md-12">
+        {% for label, flashes in app.session.flashbag.all %}
+          {% for flash in flashes %}
+            <div class="alert alert-{{ label }}">
+              {% if label == "send" %}
+                <span class="glyphicon glyphicon-send"></span>
+              {% elseif label == "alert" %}
+                <span class="glyphicon glyphicon-alert"></span>
+              {% endif %}
+              <strong>{{ flash }}</strong>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6">
+          <form role="form" action="" method="post">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+
+            <div class="form-group">
+              <label for="InputName">Your Name</label>
+
+              <div class="input-group">
+
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="InputEmail">Your Email</label>
+
+              <div class="input-group">
+                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email"
+                       required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="InputMessage">Message</label>
+
+              <div class="input-group"
+                   >
+                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
+              <div class="input-group">
+                <input type="text" class="form-control" name="InputReal" id="InputReal" required>
+              </div>
+              {#
+              <div class="g-recaptcha" data-sitekey="6LeL9SITAAAAAK800LvsQqyNwd7umgfpnAeCZm5w"></div>
+
+              
+              {% form_theme form 'EWZRecaptchaBundle:Form:ewz_recaptcha_widget.html.twig' %}
+  
+              {{ form_widget(form.recaptcha, { 'attr': {
+          'options' : {
+              'theme': 'light',
+              'type': 'image'
+          },
+      } }) }}#}
+          </form>
+        </div>
+      </div>
+      <hr class="featurette-divider hidden-lg">
+      <div class="col-lg-5 col-md-push-1">
+        <address>
+          <h3>Office Location</h3>
+
+          <p class="lead"><a
+              href="https://www.google.com/maps/preview?ie=UTF-8&q=The+Pentagon&fb=1&gl=us&hq=1400+Defense+Pentagon+Washington,+DC+20301-1400&cid=12647181945379443503&ei=qmYfU4H8LoL2oATa0IHIBg&ved=0CKwBEPwSMAo&safe=on"
+              target='_blank'>GardenPiratez<br>
+              Schoenbergstreet 29<br>
+              79285 Ebringen<br>
+              Germany</a><br>
+            Telefon: +49 (0) 7664 406 983 5<br>
+            Fax: +49 (0) 3222 394 354 82</p>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Einstellungen{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h1 class="page-header">Einstellungen</h1>
+      <p>Sofern du den Sendungs Alert an haben möchtest, musst du dies hier zulassen.</p>
+      <script>
+        if ('Notification' in window) {
+          // API supported
+          $("#notificationbutton").attr("disabled");
+        } else {
+          // API not supported
+        }
+
+        var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+        Notification.requestPermission(function (permission) {
+          // console.log(permission);
+        });
+
+        function show() {
+          var instance = new Notification(
+                  "Titelbenachrichtigung", {
+                    body: "benachrichtungsinahlt"
+                  }
+          );
+
+          instance.onclick = function () {
+            console.log('Toggle: ' + $(this).prop('checked')),
+                    console.log('Hallo Test 123');
+          };
+          instance.onerror = function () {
+            // Something to do
+          };
+          instance.onshow = function () {
+            // Something to do
+          };
+          instance.onclose = function () {
+            // Something to do
+          };
+
+          return false;
+        }
+      </script>
+
+{#      <input checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" type="checkbox"> #}
+      <input id="notificationbutton" data-toggle="toggle" type="checkbox"> Benachrichtung<br>
+      <input checked id="notificationbutton" data-toggle="toggle" type="checkbox"> Sound<br>
+      <input disabled id="notificationbutton" data-toggle="toggle" type="checkbox"> Notification<br>
+      <span class="label label-success">Success</span>Du erhälst Benachrichtigungen<br>
+      <span class="label label-danger">Danger</span> Da du Die Benachrichtigung deaktiviert hast, können wir dir nicht sagen, wann deine Sendungen kommen.<br>
+      *Die Webseite rbtv.info muss offen bleiben für Benachrichtigungen.(Json/Pushbullet in Zukunft geplant)<br>
+      <br>
+
+      <button type="button" onclick="show()">Notify me!</button>
+      <a href="#" onclick="return show()">Notify me!</a>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Die erste Option ist dies und das&mdash;denk daran, zu sagen, warum es toll ist!
+        </label>
+      </div>
+      <div class="checkbox disabled">
+        <label>
+          <input type="checkbox" value="">
+          Die zweite Option ist deaktiviert
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsfeldRadio" id="optionsfeldRadio1" value="option1" checked>
+          Die erste Option ist dies und das&mdash;denk daran, zu sagen, warum es toll ist!
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsfeldRadio" id="optionsfeldRadio2" value="option2">
+          Die zweite Option ist etwas anderes und wenn du sie auswählst, wird die erste abgewählt.
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionsfeldRadio" id="optionsfeldRadio3" value="option3" checked>
+          Die dritte Option ist deaktiviert
+        </label>
+      </div>
+
+      Benachrichtigungs Sound?
+      Chat Einblendung
+    </div>
+  </section>
+{% endblock %}

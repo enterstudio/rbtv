@@ -1,0 +1,55 @@
+{# JQuery #}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+{# Bootstrap #}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+{# AmCharts #}
+<script src="//www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="//www.amcharts.com/lib/3/serial.js"></script>
+<script src="//www.amcharts.com/lib/3/themes/light.js"></script>
+
+{# Header Easteregg #}
+<script type="text/javascript">
+  var audio = document.getElementById('easteregg_audio');
+  var logoglowing = "{{ asset('assets/images/logos/logo-glowing.png') }}";
+  var logonormal = "{{ asset('assets/images/logos/logo-menu.png') }}";
+
+  function playeasteregg() {
+    if (audio.paused) {
+      audio.play();
+      document.getElementById("logo").src = logoglowing;
+      setTimeout(function () {
+        document.getElementById("logo").src = logonormal;
+        ;
+      }, 47000);
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      document.getElementById("logo").src = logonormal;
+    }
+  }
+</script>
+<script src="{{ asset('assets/js/secretkey.js') }}"></script>
+
+{# Bootstrap Toogle #}
+<script src="//gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap2-toggle.min.js"></script>
+
+{# Google Analytics & Recaptcha #}
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-49189666-3', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src='https://www.google.com/recaptcha/api.js'></script>

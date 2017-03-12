@@ -1,0 +1,27 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}RocketBeans Livestream anschauen{% endblock %}
+
+{% block content %}
+  {#Idee: Chat rechte ein/aus-blendbar machen.#}
+  <section>
+    <div class="container">
+      <h2 class="page-header">Jetzt anschauen</h2>
+
+      <div class="video-container">
+        <iframe src="http://www.twitch.tv/rocketbeanstv/embed" frameborder="0" scrolling="no" max-height="50%"
+                width="100%"></iframe>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+             aria-valuemax="100" style="width: 20%;">
+          20% der Sendung vorbei
+        </div>
+      </div>
+      Die aktuelle Sendung geht XX Minuten, du hast also sehrviel/viel/wenig/einwenig/nurwenig verpasst.
+      ...Thumbnail -> Twitch einbinden und Beschriebung der Sendung
+      <iframe src="http://www.twitch.tv/rocketbeanstv/chat?popout=" frameborder="0" scrolling="no" height="500"
+              width="100%"></iframe>
+    </div>
+  </section>
+{% endblock %}

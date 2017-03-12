@@ -1,0 +1,68 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Facebook - Statistik{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="container-header">
+        <div class="pull-left">
+          <h1>Facebook Statistik</h1>
+        </div>
+        <div class="pull-right">
+          <a href="https://www.facebook.com/RocketBeansTV/" target="_blank">
+            <img height="48" src="{{ asset("assets/images/logos/facebook/FB-f-Logo__blue_29.png") }}"
+                 alt="Facebook">
+          </a>
+        </div>
+        <div class="clearfix"></div>
+        <h3><a href="https://www.facebook.com/rocketbeans/" target="_blank">Rocketbeans TV</a></h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>Likes:</td>
+            <td>{{ television.0.like_count }}</td>
+          </tr>
+         {# <tr>
+            <td></td>
+            <td>{{ television.0.total_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ television.0.comment_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ television.0.share_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ television.0.click_count }}</td>
+          </tr>#}
+        </table>
+        <h3><a href="https://www.facebook.com/RocketBeansTV/" target="_blank">Rocketbeans Entertaiment GmbH</a></h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>Likes:</td>
+            <td>{{ business.0.like_count }}</td>
+          </tr>
+{#          <tr>
+            <td></td>
+            <td>{{ business.0.total_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ business.0.comment_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ business.0.share_count }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ business.0.click_count }}</td>
+          </tr>#}
+        </table>
+      </div>
+    </div>
+  </section>
+{% endblock %}

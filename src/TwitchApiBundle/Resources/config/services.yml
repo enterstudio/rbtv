@@ -1,0 +1,3 @@
+services:
+  twitch_api.client.v3:
+    class: TwitchApiBundle\Client\ClientV3

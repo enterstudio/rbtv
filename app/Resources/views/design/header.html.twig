@@ -1,0 +1,24 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="pull-left">
+                <div class="logo">
+                    <img class="img-responsive" alt="Rocketbeans" id="logo" onclick="playeasteregg()"
+                         src="{{ asset('assets/images/logos/logo-menu.png') }}">
+                    <audio id="easteregg_audio">
+                        <source src="{{ asset('files/audio/easter_egg/Simo s_Bier_Song.mp3') }}" type="audio/mpeg">
+                        <source src="{{ asset('files/audio/easter_egg/Simo s_Bier_Song.ogg') }}" type="audio/ogg">
+                        <source src="{{ asset('files/audio/easter_egg/Simo s_Bier_Song.m4a') }}" type="audio/x-aac">
+                    </audio>
+                </div>
+            </div>
+
+            <nav class="pull-right">
+                {{ knp_menu_render('AppBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'design/knp_menu.html.twig'}) }}
+                {{ knp_menu_render('AppBundle:Builder:mainRightMenu', {'currentClass': 'active', 'template': 'design/knp_menu.html.twig'}) }}
+            </nav>
+        </div>
+    </div>
+</header>
+{#Test Platzierung des Easter Eggs#}
+<img id="egggif" alt="Cheater" src="{{ asset('assets/images/eastereggs/giphy.gif') }}">

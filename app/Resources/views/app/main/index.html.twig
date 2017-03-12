@@ -1,0 +1,41 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h2>Rocketbeans - Nur ein Schritt entfernt</h2>
+
+      <p>Wie ihr seht, ist die ganze Domain noch im Aufbau. Wir haben dieses Hobby Projekt vor über einem Jahr zum Start von RBTV gemacht. 
+        Leider sind wir immer noch nicht fertig da das Reallife uns dazwischen kam.
+        Ich hoffe die Bohnen finden es dennoch gut, auch wenn es schon mehrere große etablierte Fan Seiten gibt.
+        Den aktuellen Status der "Fertigstellung" seht ihr hier. </p>
+      <br>
+      <p>
+        Sofern ihr Ideen, Kritik & Anregungen habt, stehen wir dem gegenüber immer offen.
+      </p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+             aria-valuemax="100" style="width: 20%;">
+          20% der Fertigstellung
+        </div>
+      </div>
+
+      <p>Wirklich fertig gestellt wird es nie, da es immer wieder neues gibt. Über Feedback würden wir uns sehr freuen.<br>
+        Klick doch einfach mal auf das Logo links oben, wenn du alles gelesen hast.Oder tippe den altebkannten Konami Code ein.<br>
+      Du wirst sehen, wir haben viele Spielerein eingebaut. Sofern dir was einfällt, schreib es uns doch einfach.<p>
+
+      <h2>Kommende Must-See Events</h2>
+
+      <div class="slider">
+        <figure>
+          <a href="/event/demo"><img class="img-responsive" src="{{ asset("assets/images/dreamhack.jpg") }}" alt="Dreamhack 2015"></a>
+          <a href="/event/demo"><img class="img-responsive" src="{{ asset("assets/images/gamescom.jpeg") }}" alt="Gamescom 2015"></a>
+          <a href="/event/$var"><img class="img-responsive" src="{{ asset("assets/images/beansate3.jpg") }}" alt="E3 2015"></a>
+          <a href="/event/$var"><img class="img-responsive" src="{{ asset("assets/images/dosenbeatz.jpg") }}" alt="Dosenbeatz"></a>
+          <a href="/event/$var"><img class="img-responsive" src="{{ asset("assets/images/beansate3.jpg") }}" alt="E3 2015"></a> {# bitte ersetzen #}
+        </figure>
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

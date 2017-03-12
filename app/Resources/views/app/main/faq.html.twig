@@ -1,0 +1,62 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title2 %}Häufig gestellte Fragen{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="panel-group" id="accordion">
+        <div class="faqHeader">F.A.Q.</div>
+        Hier findet ihr alle regelmäßigen Fragen bzgl. rbtv.info, nicht über die Bohnen selbst. Diese findet ihr im Q&A oder auf der Rocketbeans Seite.
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Wer betreibt die Seite?</a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              Ganz einfach, das Unternehmen <strong>GardenPiratez</strong> unterstützt <strong>Huskynarr</strong> im Betrieb der Seite. Dieser versucht nach besten Wissen und Gewissen die Seite zu erstellen.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Wieso sind nicht alle Spiele verfügbar?</a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              Spiele brauchen Zeit, daher zeigen wir euch auch direkt schon Konzepte die wir erarbeiten um zu schauen, welche Spiele die meiste Interesse wecken. 
+            </div>
+          </div>
+        </div>        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Wieso macht die Seite nur langsam Fortschritte?</a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              Effektiv arbeitet nur eine Person an der Seite. Wir haben das Projekt zeitweise auf Github gehabt und um Unterstützung der Community im Forum gebeten, was leider nicht geschah. Daher arbeitet nur einer weiter an der Seite.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Wie habt ihr die Webseite realisiert?</a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              Unsere Webseite ist eine eigene Kreation die unterstützt wird von den Techniken <strong>Symfony 3</strong> das Framework auf <strong>PHP 7.0</strong> Basis. Ausgeliefert wird das ganze über das CDN (Content Delivery Network) <strong>Cloudflare</strong>. Diese holt sie die Daten mittels <strong>Nginx</strong> Webserver aus den Datenbanken <strong>Redis</strong> und <strong>MariaDB</strong>. Ebenfalls nutzen wir Bootstrap, Fontawesome und JQuery.  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

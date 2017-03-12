@@ -1,0 +1,16 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Sie haben das recht weiterzugehen{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h1>Zutritt verwehrt!</h1>
+
+      <img class="img-responsive center-block" src="{{ asset("assets/images/error/403.gif") }}" alt="Error 403">
+      <br><br>
+
+      Entweder hast du hier nichts zu suchen oder es ist ein Fehler passiert.<br>
+      Sofern du hier etwas vermisst kannst du dich jederzeit an uns wenden.
+  </section>
+{% endblock %}

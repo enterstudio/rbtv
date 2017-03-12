@@ -1,0 +1,14 @@
+{% block root %}
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+    {% for item in items %}
+      {% if item.label != "root"  %}
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ item.uri }}">
+            <span itemprop="name">{{ item.label | trans }}</span>
+          </a>
+          <meta itemprop="position" content="{{ loop.index }}">
+        </li>
+      {% endif %}
+      {%- endfor %}
+    </ol>
+    {% endblock %}

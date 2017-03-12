@@ -1,0 +1,55 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Mate Knights - Wie gut kennst du deine Freunde wirklich?{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h2>Mate Knights - Wie gut kennst du deine Freunde wirklich?</h2>
+      <p>Beim Spiel Mate Knights geht es darum, zu erfahren, wie gut man die eigenen Freunde kennt.</p>
+
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input id="invitecode" type="text" class="form-control" disabled value="https://rbtv.info/spiele/mateknights/friends/invite/23or8z234of">
+          <span class="input-group-btn">
+            <button id="invitebutton" class="btn btn-default" type="button">Copy & Share</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+
+      <br>
+      <br>
+      <br>
+      <div class="text-center">
+        <h3>Friends Match</h3>
+        <table class="table table-bordered">
+          ...
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    var copyEmailBtn = document.querySelector('#invitebutton');
+    copyEmailBtn.addEventListener('click', function (event) {
+      // Select the email link anchor text  
+      var emailLink = document.querySelector('#invitecode');
+      var range = document.createRange();
+      range.selectNode(emailLink);
+      window.getSelection().addRange(range);
+
+      try {
+        // Now that we've selected the anchor text, execute the copy command  
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
+
+      // Remove the selections - NOTE: Should use
+      // removeRange(range) when it is supported  
+      window.getSelection().removeAllRanges();
+    });
+  </script>
+{% endblock %}

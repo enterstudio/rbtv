@@ -1,0 +1,30 @@
+{% extends 'design/layout.html.twig' %}
+
+{% set pixelPerMinute = 0.5 %}
+
+{% block content %}
+  <section>
+    <div class="container full-content">
+      <div class="schedule">
+        {% for day in plan %}
+          <div class="day day{{ day.timestamp|date('N') }}">
+            <div class="info">
+              <div class="name">{{ day.timestamp|date('l') }}</div>
+              <div class="date">{{ day.timestamp|date('d.m.Y') }}</div>
+            </div>
+            {% for schedule in day.schedules %}
+              {% set totalMinutes = getTotalMinutesOnDay(schedule.start, schedule.end, day.datetime) %}
+                <div class="entry"
+                     style="height: {{ totalMinutes * pixelPerMinute }}px">
+                  <div class="time">{{ schedule.start.timestamp|date('h:i') }}</div>
+                  <div class="text">
+                    <span class="show">{{ schedule.episode.name }}</span>
+                    <span class="episode"></span>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+  </section>
+{% endblock %}

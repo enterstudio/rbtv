@@ -1,0 +1,825 @@
+{% extends "design/layout.html.twig" %}
+
+{% block site_title %}Youtube - Statistik{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="container-header">
+        <div class="pull-left">
+          <h1>Tägliche Views</h1>
+        </div>
+        <div class="pull-right">
+          <img height="48" src="{{ asset("assets/images/logos/youtube/YouTube-logo-full_color.png") }}"
+               alt="YouTube">
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="chart" id="youtubechart"></div>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th colspan="2">Platz</th>
+              <th>Zuschauer</th>
+              <th>Peak</th>
+              <th>Anschauen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><img class="img-responsive" src="{{ asset("assets/images/trophy/Trophy-gold16.png") }}" alt="YouTube"></td>
+              <td>Rocket Beans TV - Alles muss. Nix kann.</td>
+              <td>623.799</td>
+              <td><p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#1"><i
+                      class="fa fa-fw fa-video-camera"></i> Jetzt anschauen</a></p></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td><img class="img-responsive" src="{{ asset("assets/images/trophy/Trophy-silver16.png") }}" alt="YouTube"></td>
+              <td>Pen & Paper | T.E.A.R.S. | #1 | Part 1 | Der Beginn der Reise</td>
+              <td>450.362</td>
+              <td><p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#2"><i
+                      class="fa fa-fw fa-video-camera"></i> Jetzt anschauen</a></p></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td><img class="img-responsive" src="{{ asset("assets/images/trophy/Trophy-bronze16.png") }}" alt="YouTube"></td>
+              <td>ROCKET BEANS TV HALT DIE FRÄÄÄSE 06 NR 01 (OFFICIAL HD VERSION AGRARTV)</td>
+              <td>403.238</td>
+              <td><p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#3"><i
+                      class="fa fa-fw fa-video-camera"></i> Jetzt anschauen</a></p></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">4</th>
+              <td>Almost Daily #76: Partyerlebnisse</td>
+              <td>296.421</td>
+              <td><p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#4"><i
+                      class="fa fa-fw fa-video-camera"></i> Jetzt anschauen</a></p></td>
+            </tr>
+            <tr>
+              <th scope="row" colspan="2">5</th>
+              <td>Pen & Paper | T.E.A.R.S. | #1 | Part 2 | Der Beginn der Reise</td>
+              <td>292.753</td>
+              <td><p><a href="#" class="btn btn-primary" role="button" data-toggle="modal" data-target="#5"><i
+                      class="fa fa-fw fa-video-camera"></i> Jetzt anschauen</a></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="1" tabindex="-1" role="dialog" aria-labelledby="1Label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="1Label">Rocket Beans TV - Alles muss. Nix kann.</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DbBVARNonYc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="2" tabindex="-1" role="dialog" aria-labelledby="2Label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="2Label">Rocket Beans TV - Alles muss. Nix kann.</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KkuYt5xpCUk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="3" tabindex="-1" role="dialog" aria-labelledby="3Label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="3Label">ROCKET BEANS TV HALT DIE FRÄÄÄSE 06 NR 01 (OFFICIAL HD VERSION
+                AGRARTV)</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9yw8aujEVYU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="4" tabindex="-1" role="dialog" aria-labelledby="4Label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="4Label">Almost Daily #76: Partyerlebnisse</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WnD2E3DAHt4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="5" tabindex="-1" role="dialog" aria-labelledby="5Label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="5Label">Pen & Paper | T.E.A.R.S. | #1 | Part 2 | Der Beginn der Reise</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M-nBpyro4HM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {#http://developers.google.com/youtube/analytics/v1/channel_reports
+    http://developers.google.com/youtube/v3/code_samples/php
+    Das gleiche noch einmal mit den 5 neusten Videos#}
+  </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script type="text/javascript">
+    var chart = AmCharts.makeChart("youtubechart", {
+      "type": "serial",
+      "theme": "light",
+      "dataDateFormat": "YYYY-MM-DD",
+      "valueAxes": [{
+          "id": "v1",
+          "axisAlpha": 0,
+          "position": "left"
+        }],
+      "balloon": {
+        "borderThickness": 1,
+        "shadowAlpha": 0
+      },
+      "graphs": [{
+          "id": "g1",
+          "bullet": "round",
+          "bulletBorderAlpha": 1,
+          "bulletColor": "#FFFFFF",
+          "bulletSize": 5,
+          "hideBulletsCount": 50,
+          "lineThickness": 2,
+          "title": "red line",
+          "useLineColorForBulletBorder": true,
+          "valueField": "value",
+          "balloonText": "<div style='margin:5px; font-size:19px;'><span style='font-size:13px;'>[[category]]</span><br>[[value]]</div>"
+        }],
+      "chartScrollbar": {
+        "graph": "g1",
+        "oppositeAxis": false,
+        "offset": 30,
+        "scrollbarHeight": 80,
+        "backgroundAlpha": 0,
+        "selectedBackgroundAlpha": 0.1,
+        "selectedBackgroundColor": "#888888",
+        "graphFillAlpha": 0,
+        "graphLineAlpha": 0.5,
+        "selectedGraphFillAlpha": 0,
+        "selectedGraphLineAlpha": 1,
+        "autoGridCount": true,
+        "color": "#AAAAAA"
+      },
+      "chartCursor": {
+        "pan": true,
+        "valueLineEnabled": true,
+        "valueLineBalloonEnabled": true,
+        "cursorAlpha": 0,
+        "valueLineAlpha": 0.2
+      },
+      "categoryField": "date",
+      "categoryAxis": {
+        "parseDates": true,
+        "dashLength": 1,
+        "minorGridEnabled": true
+      },
+      "export": {
+        "enabled": true
+      },
+      "dataProvider": [{
+          "date": "2014-07-27",
+          "value": 113
+        }, {
+          "date": "2014-07-28",
+          "value": 111
+        }, {
+          "date": "2014-07-29",
+          "value": 115
+        }, {
+          "date": "2014-07-30",
+          "value": 116
+        }, {
+          "date": "2014-07-31",
+          "value": 118
+        }, {
+          "date": "2014-08-01",
+          "value": 113
+        }, {
+          "date": "2014-08-02",
+          "value": 122
+        }, {
+          "date": "2014-08-03",
+          "value": 123
+        }, {
+          "date": "2014-08-04",
+          "value": 120
+        }, {
+          "date": "2014-08-05",
+          "value": 117
+        }, {
+          "date": "2014-08-06",
+          "value": 116
+        }, {
+          "date": "2014-08-07",
+          "value": 118
+        }, {
+          "date": "2014-08-08",
+          "value": 121
+        }, {
+          "date": "2014-08-09",
+          "value": 126
+        }, {
+          "date": "2014-08-10",
+          "value": 124
+        }, {
+          "date": "2014-08-11",
+          "value": 129
+        }, {
+          "date": "2014-08-12",
+          "value": 132
+        }, {
+          "date": "2014-08-13",
+          "value": 118
+        }, {
+          "date": "2014-08-14",
+          "value": 124
+        }, {
+          "date": "2014-08-15",
+          "value": 122
+        }, {
+          "date": "2014-08-16",
+          "value": 118
+        }, {
+          "date": "2014-08-17",
+          "value": 119
+        }, {
+          "date": "2014-08-18",
+          "value": 114
+        }, {
+          "date": "2014-08-19",
+          "value": 115
+        }, {
+          "date": "2014-08-20",
+          "value": 112
+        }, {
+          "date": "2014-08-21",
+          "value": 18
+        }, {
+          "date": "2014-08-22",
+          "value": 19
+        }, {
+          "date": "2014-08-23",
+          "value": 18
+        }, {
+          "date": "2014-08-24",
+          "value": 17
+        }, {
+          "date": "2014-08-25",
+          "value": 15
+        }, {
+          "date": "2014-08-26",
+          "value": 111
+        }, {
+          "date": "2014-08-27",
+          "value": 113
+        }, {
+          "date": "2014-08-28",
+          "value": 118
+        }, {
+          "date": "2014-08-29",
+          "value": 120
+        }, {
+          "date": "2014-08-30",
+          "value": 129
+        }, {
+          "date": "2014-08-31",
+          "value": 133
+        }, {
+          "date": "2014-09-01",
+          "value": 142
+        }, {
+          "date": "2014-09-02",
+          "value": 135
+        }, {
+          "date": "2014-09-03",
+          "value": 131
+        }, {
+          "date": "2014-09-04",
+          "value": 147
+        }, {
+          "date": "2014-09-05",
+          "value": 152
+        }, {
+          "date": "2014-09-06",
+          "value": 146
+        }, {
+          "date": "2014-09-07",
+          "value": 141
+        }, {
+          "date": "2014-09-08",
+          "value": 143
+        }, {
+          "date": "2014-09-09",
+          "value": 140
+        }, {
+          "date": "2014-09-10",
+          "value": 139
+        }, {
+          "date": "2014-09-11",
+          "value": 134
+        }, {
+          "date": "2014-09-12",
+          "value": 129
+        }, {
+          "date": "2014-09-13",
+          "value": 134
+        }, {
+          "date": "2014-09-14",
+          "value": 137
+        }, {
+          "date": "2014-09-15",
+          "value": 142
+        }, {
+          "date": "2014-09-16",
+          "value": 149
+        }, {
+          "date": "2014-09-17",
+          "value": 146
+        }, {
+          "date": "2014-09-18",
+          "value": 147
+        }, {
+          "date": "2014-09-19",
+          "value": 155
+        }, {
+          "date": "2014-09-20",
+          "value": 159
+        }, {
+          "date": "2014-09-21",
+          "value": 158
+        }, {
+          "date": "2014-09-22",
+          "value": 157
+        }, {
+          "date": "2014-09-23",
+          "value": 161
+        }, {
+          "date": "2014-09-24",
+          "value": 159
+        }, {
+          "date": "2014-09-25",
+          "value": 167
+        }, {
+          "date": "2014-09-26",
+          "value": 165
+        }, {
+          "date": "2014-09-27",
+          "value": 161
+        }, {
+          "date": "2014-09-28",
+          "value": 166
+        }, {
+          "date": "2014-09-29",
+          "value": 169
+        }, {
+          "date": "2014-09-30",
+          "value": 171
+        }, {
+          "date": "2014-10-01",
+          "value": 167
+        }, {
+          "date": "2014-10-02",
+          "value": 163
+        }, {
+          "date": "2014-10-03",
+          "value": 146
+        }, {
+          "date": "2014-10-04",
+          "value": 132
+        }, {
+          "date": "2014-10-05",
+          "value": 121
+        }, {
+          "date": "2014-10-06",
+          "value": 118
+        }, {
+          "date": "2014-10-07",
+          "value": 121
+        }, {
+          "date": "2014-10-08",
+          "value": 128
+        }, {
+          "date": "2014-10-09",
+          "value": 127
+        }, {
+          "date": "2014-10-10",
+          "value": 136
+        }, {
+          "date": "2014-10-11",
+          "value": 133
+        }, {
+          "date": "2014-10-12",
+          "value": 131
+        }, {
+          "date": "2014-10-13",
+          "value": 130
+        }, {
+          "date": "2014-10-14",
+          "value": 134
+        }, {
+          "date": "2014-10-15",
+          "value": 138
+        }, {
+          "date": "2014-10-16",
+          "value": 137
+        }, {
+          "date": "2014-10-17",
+          "value": 144
+        }, {
+          "date": "2014-10-18",
+          "value": 149
+        }, {
+          "date": "2014-10-19",
+          "value": 153
+        }, {
+          "date": "2014-10-20",
+          "value": 157
+        }, {
+          "date": "2014-10-21",
+          "value": 160
+        }, {
+          "date": "2014-10-22",
+          "value": 161
+        }, {
+          "date": "2014-10-23",
+          "value": 169
+        }, {
+          "date": "2014-10-24",
+          "value": 167
+        }, {
+          "date": "2014-10-25",
+          "value": 172
+        }, {
+          "date": "2014-10-26",
+          "value": 177
+        }, {
+          "date": "2014-10-27",
+          "value": 175
+        }, {
+          "date": "2014-10-28",
+          "value": 170
+        }, {
+          "date": "2014-10-29",
+          "value": 172
+        }, {
+          "date": "2014-10-30",
+          "value": 170
+        }, {
+          "date": "2014-10-31",
+          "value": 172
+        }, {
+          "date": "2014-11-01",
+          "value": 173
+        }, {
+          "date": "2014-11-02",
+          "value": 167
+        }, {
+          "date": "2014-11-03",
+          "value": 168
+        }, {
+          "date": "2014-11-04",
+          "value": 165
+        }, {
+          "date": "2014-11-05",
+          "value": 171
+        }, {
+          "date": "2014-11-06",
+          "value": 175
+        }, {
+          "date": "2014-11-07",
+          "value": 174
+        }, {
+          "date": "2014-11-08",
+          "value": 171
+        }, {
+          "date": "2014-11-09",
+          "value": 176
+        }, {
+          "date": "2014-11-10",
+          "value": 177
+        }, {
+          "date": "2014-11-11",
+          "value": 181
+        }, {
+          "date": "2014-11-12",
+          "value": 183
+        }, {
+          "date": "2014-11-13",
+          "value": 180
+        }, {
+          "date": "2014-11-14",
+          "value": 181
+        }, {
+          "date": "2014-11-15",
+          "value": 187
+        }, {
+          "date": "2014-11-16",
+          "value": 182
+        }, {
+          "date": "2014-11-17",
+          "value": 186
+        }, {
+          "date": "2014-11-18",
+          "value": 180
+        }, {
+          "date": "2014-11-19",
+          "value": 187
+        }, {
+          "date": "2014-11-20",
+          "value": 183
+        }, {
+          "date": "2014-11-21",
+          "value": 185
+        }, {
+          "date": "2014-11-22",
+          "value": 184
+        }, {
+          "date": "2014-11-23",
+          "value": 182
+        }, {
+          "date": "2014-11-24",
+          "value": 173
+        }, {
+          "date": "2014-11-25",
+          "value": 171
+        }, {
+          "date": "2014-11-26",
+          "value": 175
+        }, {
+          "date": "2014-11-27",
+          "value": 179
+        }, {
+          "date": "2014-11-28",
+          "value": 170
+        }, {
+          "date": "2014-11-29",
+          "value": 173
+        }, {
+          "date": "2014-11-30",
+          "value": 161
+        }, {
+          "date": "2014-12-01",
+          "value": 162
+        }, {
+          "date": "2014-12-02",
+          "value": 166
+        }, {
+          "date": "2014-12-03",
+          "value": 165
+        }, {
+          "date": "2014-12-04",
+          "value": 173
+        }, {
+          "date": "2014-12-05",
+          "value": 179
+        }, {
+          "date": "2014-12-06",
+          "value": 178
+        }, {
+          "date": "2014-12-07",
+          "value": 178
+        }, {
+          "date": "2014-12-08",
+          "value": 178
+        }, {
+          "date": "2014-12-09",
+          "value": 174
+        }, {
+          "date": "2014-12-10",
+          "value": 173
+        }, {
+          "date": "2014-12-11",
+          "value": 175
+        }, {
+          "date": "2014-12-12",
+          "value": 170
+        }, {
+          "date": "2014-12-13",
+          "value": 177
+        }, {
+          "date": "2014-12-14",
+          "value": 167
+        }, {
+          "date": "2014-12-15",
+          "value": 162
+        }, {
+          "date": "2014-12-16",
+          "value": 164
+        }, {
+          "date": "2014-12-17",
+          "value": 161
+        }, {
+          "date": "2014-12-18",
+          "value": 159
+        }, {
+          "date": "2014-12-19",
+          "value": 153
+        }, {
+          "date": "2014-12-20",
+          "value": 154
+        }, {
+          "date": "2014-12-21",
+          "value": 156
+        }, {
+          "date": "2014-12-22",
+          "value": 159
+        }, {
+          "date": "2014-12-23",
+          "value": 158
+        }, {
+          "date": "2014-12-24",
+          "value": 155
+        }, {
+          "date": "2014-12-25",
+          "value": 152
+        }, {
+          "date": "2014-12-26",
+          "value": 154
+        }, {
+          "date": "2014-12-27",
+          "value": 150
+        }, {
+          "date": "2014-12-28",
+          "value": 150
+        }, {
+          "date": "2014-12-29",
+          "value": 151
+        }, {
+          "date": "2014-12-30",
+          "value": 152
+        }, {
+          "date": "2014-12-31",
+          "value": 158
+        }, {
+          "date": "2015-01-01",
+          "value": 160
+        }, {
+          "date": "2015-01-02",
+          "value": 167
+        }, {
+          "date": "2015-01-03",
+          "value": 164
+        }, {
+          "date": "2015-01-04",
+          "value": 166
+        }, {
+          "date": "2015-01-05",
+          "value": 160
+        }, {
+          "date": "2015-01-06",
+          "value": 163
+        }, {
+          "date": "2015-01-07",
+          "value": 161
+        }, {
+          "date": "2015-01-08",
+          "value": 160
+        }, {
+          "date": "2015-01-09",
+          "value": 165
+        }, {
+          "date": "2015-01-10",
+          "value": 175
+        }, {
+          "date": "2015-01-11",
+          "value": 177
+        }, {
+          "date": "2015-01-12",
+          "value": 178
+        }, {
+          "date": "2015-01-13",
+          "value": 170
+        }, {
+          "date": "2015-01-14",
+          "value": 170
+        }, {
+          "date": "2015-01-15",
+          "value": 173
+        }, {
+          "date": "2015-01-16",
+          "value": 171
+        }, {
+          "date": "2015-01-17",
+          "value": 174
+        }, {
+          "date": "2015-01-18",
+          "value": 178
+        }, {
+          "date": "2015-01-19",
+          "value": 185
+        }, {
+          "date": "2015-01-20",
+          "value": 182
+        }, {
+          "date": "2015-01-21",
+          "value": 183
+        }, {
+          "date": "2015-01-22",
+          "value": 188
+        }, {
+          "date": "2015-01-23",
+          "value": 185
+        }, {
+          "date": "2015-01-24",
+          "value": 185
+        }, {
+          "date": "2015-01-25",
+          "value": 180
+        }, {
+          "date": "2015-01-26",
+          "value": 187
+        }, {
+          "date": "2015-01-27",
+          "value": 184
+        }, {
+          "date": "2015-01-28",
+          "value": 183
+        }, {
+          "date": "2015-01-29",
+          "value": 184
+        }, {
+          "date": "2015-01-30",
+          "value": 201
+        }]
+    });
+
+    chart.addListener("rendered", zoomChart);
+
+    zoomChart();
+
+    function zoomChart() {
+      chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
+    }
+  </script>
+{% endblock %}

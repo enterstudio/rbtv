@@ -1,0 +1,27 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Showname{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://placehold.it/64x64" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ show.name }}</h4>
+          {{ show.description|raw }}
+        </div>
+      </div>
+      <!-- 16:9-Seitenverhältnis -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="..."></iframe>
+      </div>
+
+      <button class="close"><i class="fa fa-fw fa-sign-out"></i>Zur nächsten Show</button>
+    </div>
+  </section>
+{% endblock %}

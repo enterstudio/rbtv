@@ -1,0 +1,63 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Dosenbeatz{% endblock %}
+
+{% block content %}
+  <section>
+
+    <script type="text/javascript" src="{{ asset('assets/js/html5gallery.js') }}"></script>
+    <div class="container">
+      <h1>Dosenbeatz</h1>
+      <center>
+        <h2>Aktuelle Videos und Clips von Dosenbeatz & RBTV</h2>
+
+        <div class="html5gallery" data-skin="vertical" data-width="800" data-height="500" style="display:none;">
+
+          {#      <!-- Add images to Gallery -->
+                <a href="{{ asset('assets/images/player/Trees_large.jpg') }}"><img src="{{ asset('assets/images/player/Trees_small.jpg') }}" alt="Trees"></a>
+                <a href="{{ asset('assets/images/player/Island_large.jpg') }}"><img src="{{ asset('assets/images/player/Island_small.jpg') }}" alt="Island"></a>
+          
+                <!-- Add videos to Gallery -->
+                <a href="{{ asset('assets/images/player/Big_Buck_Bunny.mp4') }}"><img src="{{ asset('assets/images/player/Big_Buck_Bunny.jpg') }}" alt="Big Buck Bunny, Copyright Blender Foundation"></a>#}
+
+          <!-- Add Youtube video to Gallery -->
+          <a href="https://openload.co/embed/ML1EpZN-DXo/Dosenbeatz8%23Dreamhack_2016_1080p.mp4"><img src="http://img.youtube.com/vi/zxdCQ9CYSLw/2.jpg" alt="Dosenbeatz - Dreamhack"></a>
+          <a href="http://www.youtube.com/embed/zxdCQ9CYSLw"><img src="http://img.youtube.com/vi/zxdCQ9CYSLw/2.jpg" alt="Die Hübschen - Looten & Leveln"></a>
+          <a href="http://www.youtube.com/embed/p6CzEtaFw3g"><img src="http://img.youtube.com/vi/p6CzEtaFw3g/2.jpg" alt="Dosenbeatz #2 | Teaser"></a>
+          <a href="http://www.youtube.com/embed/6aR-ISic8IY"><img src="http://img.youtube.com/vi/6aR-ISic8IY/2.jpg" alt="Die Kakteen - Zehn Mark Fünfzig"></a>
+          <a href="http://www.youtube.com/embed/N2MFoqzFT3A"><img src="http://img.youtube.com/vi/N2MFoqzFT3A/2.jpg" alt="Test Video"></a>
+          <a href="http://www.youtube.com/embed/9yw8aujEVYU"><img src="http://img.youtube.com/vi/9yw8aujEVYU/2.jpg" alt="RBTV -  HALT DIE FRÄÄÄSE 06 NR 01 "></a>
+          <a href="http://www.youtube.com/embed/H_6_UXLC7bA"><img src="http://img.youtube.com/vi/H_6_UXLC7bA/2.jpg" alt="Dosenbeatz Special | Robert DeLong Interview"></a>
+
+          <!-- Add Vimeo video to Gallery -->
+          <a href="https://player.vimeo.com/video/124964071?title=0&amp;byline=0&amp;portrait=0"><img src="https://i.vimeocdn.com/video/514890070_1280.jpg" alt="Dosenbeatz #2 | Part 1 von 4"></a>
+        </div>
+      </center>
+
+      <div style="clear:both;"></div>
+      <br>
+      <center>
+        <h2>Aktuelle Mixcloud Uploads</h2>
+      </center>
+
+      <iframe src="https://www.mixcloud.com/widget/iframe/?embed_type=widget_standard&amp;embed_uuid=c6dc6819-646f-437f-a353-44abc287b322&amp;feed=https%3A%2F%2Fwww.mixcloud.com%2FDieH%25C3%25BCbschen%2F&amp;hide_cover=1&amp;light=1&amp;replace=0" frameborder="0" height="360" width="100%"></iframe>
+      <div style="clear: both; height: 3px; width: auto;"></div>
+      <p style="display: block; font-size: 11px; font-family: &quot;Open Sans&quot;,Helvetica,Arial,sans-serif; margin: 0px; padding: 3px 4px; color: rgb(153, 153, 153); width: auto;">
+        <a href="https://www.mixcloud.com/DieH%C3%BCbschen/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=resource_link" target="_blank" style="color:#808080; font-weight:bold;">Shows by Die Hübschen</a><span> on </span><a href="https://www.mixcloud.com/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=homepage_link" target="_blank" style="color:#808080; font-weight:bold;"> Mixcloud</a></p>
+      <div style="clear: both; height: 3px; width: auto;"></div>
+
+    </div>
+  </section>
+
+{% endblock %}
+{#
+Playlist von oben nach unten
+rikdevos.com/demos/youtube-video-playlist/
+http://johndyer.name/html5-video-wrapper-for-youtube-and-vimeo-api-mediaelement-js/
+http://mediaelementjs.com/examples/?name=youtube
+http://creativeinteractivemedia.com/player/wordpress_ultimate_video_player/?page_id=67
+https://github.com/carloscabo/responsive-youtube-player-with-playlist
+
+Ungefähr so
+https://html5box.com/html5gallery/demo_videoplayer.php
+#}

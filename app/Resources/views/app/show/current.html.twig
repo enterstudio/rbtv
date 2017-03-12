@@ -1,0 +1,23 @@
+  
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Gerade läuft - SHOW{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h1>Aktuelle Sendung</h1>
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+             aria-valuemax="100" style="width: 20%;">
+          20% der Sendung vorbei
+        </div>
+      </div>
+      Die aktuelle Sendung geht XX Minuten, du hast also sehrviel/viel/wenig/einwenig/nurwenig verpasst.
+ ...Thumbnail -> Twitch einbinden und Beschriebung der Sendung
+  </section>
+{% endblock %}
+{#Bilder des Live streams .. onclick change vrom pstream
+      https://github.com/perryflynn/rocketplan
+      http://rocketplan.anysrc.net/#}

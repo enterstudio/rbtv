@@ -1,0 +1,30 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block site_title %}Shows{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container">
+
+      <div class="row">
+        {% for show in shows %}
+          <div class="col-sm-4 col-md-3">
+            <div class="thumbnail">
+              <img src="{{ show.logo }}" alt="{{ show.name }}">
+
+              <div class="caption">
+                <h3>{{ show.name }}</h3>
+
+                <p>...</p>
+
+                <p><a href="{{ path('show', {'slug': 'show.name '}) }}" class="btn btn-primary" role="button">Info</a> <a href="#" class="btn btn-default"
+                                                                                                                          role="button">Nächste Sendung</a></p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

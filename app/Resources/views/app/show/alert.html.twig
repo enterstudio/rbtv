@@ -1,0 +1,65 @@
+{% extends 'design/layout.html.twig' %}
+
+{% block content %}
+  <section>
+    <div class="container">
+      <h2>Benachrichtigung über Sendungen</h2>
+      Möchtest du Benachrichtigungen über deine Lieblingssendungen erhalten?
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Show</th>
+              <th>N/L/I</th>
+              <th>Aktiv</th>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Show</th>
+              <th>N/L/I</th>
+              <th>Aktiv</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Dosenbeatz</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>Bohnjour</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>MoinMoin</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>Pen&Paper</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>Bohndesliga</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>Kino+</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            <tr>
+              <td>Almost Daily</td>
+              <td><select class="selectpicker"><option>Neu</option><option>Live</option><option>Immer</option></select></td>
+              <td><input id="notificationbutton" data-toggle="toggle" type="checkbox"><br></td>
+            </tr>
+            </body>
+        </table>
+      </div>
+      <button class="close"><i class="fa fa-fw fa-sign-out"></i>Speichern</button>
+    </div>
+  </section>
+{% endblock %}
